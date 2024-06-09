@@ -31,3 +31,28 @@ hash_map = { name: "zhang san", age: 30 }
 hash_map.each do |key, value|
   puts "#{key}: #{value}"
 end
+
+# 如果你还需要索引值，可以使用 "each_with_index"，并且定义
+# 一个索引变量
+puts "#"*30
+array.each_with_index do |value, index|
+  puts "#{index}: #{value}"
+end
+
+puts "#"*30
+counter = 1
+while counter <= 5 do
+  puts "iteration #{counter}"
+  counter += 1
+end
+
+
+# Ruby 中还有很多有用的循环遍历函数，
+# 如 "map", "reduce", "inject" 等等。
+# 以map为例，它会遍历数组，并根据你在
+# 块中定义的逻辑对它进行处理，然后返回
+# 一个全新的数组。
+puts "#"*30
+doubled = array.map { |element| element * 2 }
+puts doubled
+

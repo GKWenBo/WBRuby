@@ -75,3 +75,18 @@ puts :pending.class
 status = :pending
 puts status == :pending
 puts status == 'pending'
+
+puts "="*20
+# 按照惯例，所有返回布尔值的方法都以 ? 结尾
+puts 5.even?
+puts 5.odd?
+
+# 如果方法名末尾有感叹号 !，表示会做一些破坏性的操作，比如修改调用者自身。
+# 很多方法都会有一个 ! 的版本来进行修改，
+# 和一个只返回更新结果的非 ! 版本
+puts "="*20
+company_name = "Dunder Mifflin"
+puts company_name.upcase
+puts company_name
+# company_name.upcase!
+# puts company_name
